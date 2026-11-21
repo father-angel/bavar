@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کتاب مقدس گروه باور | بزرگ‌ترین دایرةالمعارف موفقیت، ثروت و قدرت تاریخ ایران</title>
+    <meta name="description" content="کتاب مقدس گروه باور به بنیان‌گذاری آرش الطافیان؛ ۱۷ فصل طوفانی و ۲۱ محور تخصصی کسب‌وکار، سرمایه‌گذاری، تجارت، قدرت و اَبَررهبری." />
+
+    <!-- فونت فارسی وزیرمتن (Vazirmatn) از Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- لود کردن Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: {
+                            950: '#050505',
+                            900: '#0B0B0D',
+                            850: '#0F0F13',
+                            800: '#121216',
+                            700: '#1A1A21',
+                        },
+                        gold: {
+                            100: '#F8EBD2',
+                            200: '#F1D9A8',
+                            300: '#E2BE84',
+                            400: '#D4AF37',
+                            500: '#B88A44',
+                            600: '#8F682C',
+                        },
+                        ivory: '#F5F2EB',
+                        warmgray: '#A8A399',
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 40px -10px rgba(212, 175, 55, 0.35)',
+                        'gold-soft': '0 10px 35px -15px rgba(226, 190, 132, 0.2)',
+                        'gold-intense': '0 0 60px -12px rgba(212, 175, 55, 0.5)',
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* تنظیمات پایه و اسکرول‌بار لوکس */
+        html, body {
+            background-color: #050505;
+            color: #F5F2EB;
+            font-family: 'Vazirmatn', sans-serif;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #E2BE84, #B88A44);
+            border-radius: 9999px;
+        }
+
+        /* بافت پس‌زمینه هندسی بسیار ظریف طلایی */
+        .bg-royal-grid {
+            background-image:
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.14) 0%, transparent 55%),
+                linear-gradient(rgba(226, 190, 132, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(226, 190, 132, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 48px 48px, 48px 48px;
+        }
+
+        /* گرادیان متنی طلایی سلطنتی */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #F8EBD2 0%, #E2BE84 35%, #D4AF37 65%, #B88A44 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* دکمه طلایی با افکت درخشش (Shimmer CTA) */
+        .btn-gold-shimmer {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #E2BE84 0%, #D4AF37 50%, #B88A44 100%);
+            color: #050505;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .btn-gold-shimmer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -120%;
+            width: 80%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            transform: skewX(-25deg);
+            animation: shimmerSweep 3.8s infinite;
+        }
+        .btn-gold-shimmer:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px -8px rgba(212, 175, 55, 0.55);
+        }
+
+        @keyframes shimmerSweep {
+            0% { right: -120%; }
+            45% { right: 140%; }
+            100% { right: 140%; }
+        }
+
+        /* انیمیشن شناوری بسیار نرم برای لوگو */
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float-slow {
+            animation: gentleFloat 6s ease-in-out infinite;
+        }
+
+        /* انیمیشن ورود نرم در اسکرول */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* استایل کارت‌های ذغالی با حاشیه ظریف طلایی */
+        .luxury-card {
+            background: linear-gradient(180deg, rgba(20, 20, 26, 0.92) 0%, rgba(12, 12, 16, 0.96) 100%);
+            border: 1px solid rgba(226, 190, 132, 0.16);
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .luxury-card:hover {
+            border-color: rgba(212, 175, 55, 0.45);
+            box-shadow: 0 18px 40px -20px rgba(212, 175, 55, 0.25);
+        }
+
+        /* آکاردئون نرم */
+        .accordion-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.35s ease;
+        }
+        .accordion-item.active .accordion-content {
+            grid-template-rows: 1fr;
+        }
+        .accordion-inner {
+            overflow: hidden;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+            color: #E2BE84;
+        }
+
+        /* نورپردازی محیطی */
+        .ambient-orb {
+            filter: blur(90px);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-obsidian-950 text-ivory antialiased selection:bg-gold-400 selection:text-obsidian-950">
+
+    <!-- نوار پیشرفت اسکرول طلایی در بالای صفحه -->
+    <div class="fixed top-0 left-0 right-0 z-[70] h-[3px] bg-obsidian-900/80">
+        <div id="scroll-progress" class="h-full w-0 bg-gradient-to-l from-gold-200 via-gold-400 to-gold-500 shadow-[0_0_12px_rgba(212,175,55,0.8)] transition-all duration-75"></div>
+    </div>
+
+    <!-- قالب SVG مخفی لوگوی اختصاصی گروه باور (ققنوس/عقاب برخاسته از میان کتاب باز روی سه ستون کلاسیک) -->
+    <!-- این SVG به‌صورت خودکار به‌عنوان Fallback در صورت نبود فایل IMG_20261118_100631_143.jpg فعال می‌شود -->
+    <template id="bavar-logo-svg-template">
+        <svg viewBox="0 0 260 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" aria-label="لوگوی گروه باور">
+            <defs>
+                <linearGradient id="bavarGoldStroke" x1="20" y1="15" x2="240" y2="230" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#F1D9A8" />
+                    <stop offset="50%" stop-color="#E2BE84" />
+                    <stop offset="100%" stop-color="#B88A44" />
+                </linearGradient>
+            </defs>
+            <!-- بال‌های هندسی چپ و راست -->
+            <path d="M50 120V32L104 82V132" stroke="url(#bavarGoldStroke)" stroke-width="5.5" stroke-linejoin="miter" />
+            <path d="M68 114V62L92 86V124" stroke="url(#bavarGoldStroke)" stroke-width="4.5" stroke-linejoin="miter" />
+            <path d="M90 128V78L118 106V138" stroke="url(#bavarGoldStroke)" stroke-width="4.5" stroke-linejoin="miter" />
+
+            <path d="M210 120V32L156 82V132" stroke="url(#bavarGoldStroke)" stroke-width="5.5" stroke-linejoin="miter" />
+            <path d="M192 114V62L168 86V124" stroke="url(#bavarGoldStroke)" stroke-width="4.5" stroke-linejoin="miter" />
+            <path d="M170 128V78L142 106V138" stroke="url(#bavarGoldStroke)" stroke-width="4.5" stroke-linejoin="miter" />
+
+            <!-- گردن و سر ققنوس/عقاب هندسی رو به راست -->
+            <path d="M120 138V72L134 52H112L104 42H144L162 56L154 62L144 58L134 72V92L146 108V138" stroke="url(#bavarGoldStroke)" stroke-width="5.2" stroke-linejoin="miter" />
+            <circle cx="137" cy="49" r="2.8" fill="#E2BE84" />
+            <path d="M130 144V84" stroke="url(#bavarGoldStroke)" stroke-width="4" />
+
+            <!-- کتاب باز باشکوه در مرکز -->
+            <!-- نیمه چپ کتاب -->
+            <path d="M130 150C114 134 86 122 52 122L24 152C62 152 96 160 122 172H138C164 160 198 152 236 152L208 122C174 122 146 134 130 150Z" fill="#050505" stroke="url(#bavarGoldStroke)" stroke-width="5.5" stroke-linejoin="miter" />
+            <!-- خطوط ورق‌های کتاب -->
+            <path d="M40 142C72 142 102 149 124 160" stroke="url(#bavarGoldStroke)" stroke-width="3.6" />
+            <path d="M52 132C80 133 106 140 126 152" stroke="url(#bavarGoldStroke)" stroke-width="3.2" />
+            <path d="M220 142C188 142 158 149 136 160" stroke="url(#bavarGoldStroke)" stroke-width="3.6" />
+            <path d="M208 132C180 133 154 140 134 152" stroke="url(#bavarGoldStroke)" stroke-width="3.2" />
+            <!-- جلد زیرین و قوس پایه کتاب -->
+            <path d="M42 162L56 176H96L116 186H144L164 176H204L218 162" stroke="url(#bavarGoldStroke)" stroke-width="5" stroke-linejoin="miter" />
+
+            <!-- سه ستون کلاسیک زیر کتاب -->
+            <!-- ستون چپ -->
+            <path d="M64 176V208M86 176V208M75 180V208" stroke="url(#bavarGoldStroke)" stroke-width="4.5" />
+            <path d="M58 208H92L100 220H50L58 208Z" fill="#050505" stroke="url(#bavarGoldStroke)" stroke-width="4.5" stroke-linejoin="miter" />
+
+            <!-- ستون وسط -->
+            <path d="M119 186V214M141 186V214M130 189V214" stroke="url(#bavarGoldStroke)" stroke-width="4.5" />
+            <path d="M112 214H148L158 228H102L112 214Z" fill="#050505" stroke="url(#bavarGoldStroke)" stroke-width="4.8" stroke-linejoin="miter" />
+
+            <!-- ستون راست -->
+            <path d="M174 176V208M196 176V208M185 180V208" stroke="url(#bavarGoldStroke)" stroke-width="4.5" />
+            <path d="M168 208H202L210 220H160L168 208Z" fill="#050505" stroke="url(#bavarGoldStroke)" stroke-width="4.5" stroke-linejoin="miter" />
+
+            <!-- خط اتصال ظریف پایه‌ها -->
+            <path d="M100 220H108M152 220H160" stroke="url(#bavarGoldStroke)" stroke-width="3.2" />
+        </svg>
+    </template>
+
+    <!-- ۱. هدر چسبان (Sticky Navbar) -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 border-b border-gold-300/10 bg-obsidian-950/85 backdrop-blur-xl transition-all duration-300">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between gap-4">
+                <!-- لوگو و نام برند -->
+                <a href="#top" class="flex items-center gap-3 group">
+                    <div class="relative flex h-12 w-12 items-center justify-center rounded-xl border border-gold-300/30 bg-obsidian-950 p-1 shadow-gold-soft transition-all group-hover:border-gold-400">
+                        <img
+                            src="IMG_20261118_100631_143.jpg"
+                            alt="لوگوی کتاب مقدس گروه باور"
+                            class="h-full w-full object-contain rounded-lg mix-blend-lighten"
+                            onerror="handleLogoFallback(this)"
+                        />
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-base sm:text-lg font-extrabold tracking-tight text-ivory group-hover:text-gold-300 transition-colors">
+                            کتاب مقدس گروه باور
+                        </span>
+                        <span class="text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-gold-300/80 uppercase">
+                            BAVAR GROUP
+                        </span>
+                    </div>
+                </a>
+
+                <!-- لینک‌های ناوبری دسکتاپ -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-warmgray">
+                    <a href="#why-bavar" class="hover:text-gold-300 transition-colors py-2">معرفی</a>
+                    <a href="#chapters" class="hover:text-gold-300 transition-colors py-2">۱۷ فصل دوره</a>
+                    <a href="#business-world" class="hover:text-gold-300 transition-colors py-2">جهان کسب‌وکار</a>
+                    <a href="#guarantee" class="hover:text-gold-300 transition-colors py-2">تضمین دوره</a>
+                    <a href="#faq" class="hover:text-gold-300 transition-colors py-2">سوالات متداول</a>
+                </nav>
+
+                <!-- دکمه ثبت‌نام و منوی موبایل -->
+                <div class="flex items-center gap-3">
+                    <a href="#register" class="btn-gold-shimmer hidden sm:inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-extrabold shadow-gold-soft">
+                        <span>ثبت‌نام و دریافت دوره</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                        </svg>
+                    </a>
+
+                    <!-- دکمه همبرگری موبایل -->
+                    <button id="mobile-menu-btn" type="button" aria-label="باز کردن منو" class="lg:hidden inline-flex items-center justify-center rounded-xl border border-gold-300/25 bg-obsidian-800 p-2.5 text-gold-300 hover:bg-obsidian-700 transition-colors">
+                        <svg id="menu-icon-open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- منوی کشویی موبایل -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gold-300/15 bg-obsidian-900/98 backdrop-blur-xl">
+            <div class="mx-auto max-w-7xl space-y-1 px-4 py-5">
+                <a href="#why-bavar" class="mobile-nav-link block rounded-xl px-4 py-3 text-base font-medium text-ivory hover:bg-obsidian-800 hover:text-gold-300 transition-colors">معرفی دوره</a>
+                <a href="#chapters" class="mobile-nav-link block rounded-xl px-4 py-3 text-base font-medium text-ivory hover:bg-obsidian-800 hover:text-gold-300 transition-colors">۱۷ فصل طوفانی دوره</a>
+                <a href="#business-world" class="mobile-nav-link block rounded-xl px-4 py-3 text-base font-medium text-ivory hover:bg-obsidian-800 hover:text-gold-300 transition-colors">جهان عظیم کسب‌وکار (۲۱ محور)</a>
+                <a href="#guarantee" class="mobile-nav-link block rounded-xl px-4 py-3 text-base font-medium text-ivory hover:bg-obsidian-800 hover:text-gold-300 transition-colors">تضمین قاطع گروه باور</a>
+                <a href="#faq" class="mobile-nav-link block rounded-xl px-4 py-3 text-base font-medium text-ivory hover:bg-obsidian-800 hover:text-gold-300 transition-colors">سوالات متداول</a>
+                <div class="pt-3">
+                    <a href="#register" class="mobile-nav-link btn-gold-shimmer flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-base font-extrabold">
+                        ثبت‌نام و دریافت دوره
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="top" class="relative overflow-hidden">
+        <!-- ۲. بخش آغازین پرقدرت (Hero Section) -->
+        <section class="relative bg-royal-grid pt-32 pb-20 lg:pt-40 lg:pb-28">
+            <!-- نورپردازی محیطی طلایی -->
+            <div class="ambient-orb absolute -top-24 right-1/4 h-96 w-96 rounded-full bg-gold-400/15"></div>
+            <div class="ambient-orb absolute top-40 -left-24 h-80 w-80 rounded-full bg-gold-500/10"></div>
+
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-10">
+                    <!-- ستون متن و فراخوان -->
+                    <div class="lg:col-span-7 text-center lg:text-right">
+                        <!-- نشان بالا -->
+                        <div class="inline-flex items-center gap-2 rounded-full border border-gold-300/35 bg-obsidian-800/80 px-4 py-2 text-xs sm:text-sm font-semibold text-gold-200 shadow-gold-soft backdrop-blur-md">
+                            <span class="h-2 w-2 rounded-full bg-gold-400 animate-pulse"></span>
+                            <span>بزرگ‌ترین و بی‌رقیب‌ترین دایرةالمعارف موفقیت، ثروت و قدرت در تاریخ ایران</span>
+                        </div>
+
+                        <!-- تیتر اصلی با گرادیان طلایی -->
+                        <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.2] tracking-tight">
+                            <span class="text-gold-gradient drop-shadow-[0_4px_24px_rgba(212,175,55,0.28)]">
+                                کتاب مقدس گروه باور
+                            </span>
+                        </h1>
+
+                        <!-- زیرعنوان بنیان‌گذار -->
+                        <p class="mt-4 inline-flex items-center gap-2 text-sm sm:text-base font-bold text-gold-300/90">
+                            <span class="h-px w-8 bg-gold-400/60 hidden sm:inline-block"></span>
+                            <span>گروه توسعه کسب‌وکار باور (BAVAR GROUP) — بنیان‌گذار: آرش الطافیان</span>
+                            <span class="h-px w-8 bg-gold-400/60 hidden sm:inline-block"></span>
+                        </p>
+
+                        <!-- زیرتیتر اقرارآمیز و جذاب -->
+                        <p class="mt-6 text-base sm:text-lg lg:text-[1.15rem] leading-8 sm:leading-9 text-ivory/90 font-normal max-w-2xl mx-auto lg:mx-0">
+                            تا امروز هرچه از دوره‌های انگیزشی، کتاب‌های زرد و نسخه‌های تکراری موفقیت شنیده‌اید را یک‌جا دور بریزید. یک دایرةالمعارف عظیم و بی‌سابقه به بنیان‌گذاری <strong class="text-gold-300 font-bold">آرش الطافیان</strong> که تمام شاخه‌های موفقیت، کسب‌وکار، سرمایه‌گذاری، تجارت، قدرت و رهبری را در <strong class="text-gold-200 font-bold">۱۷ فصل طوفانی</strong> و ده‌ها زیربخش تخصصی یکجا گرد هم آورده است.
+                        </p>
+
+                        <!-- دکمه‌های اقدام به عمل -->
+                        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#register" class="btn-gold-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-2xl px-8 py-4 text-base sm:text-lg font-black shadow-gold-glow">
+                                <span>شروع ساخت امپراتوری (ثبت‌نام)</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                                </svg>
+                            </a>
+                            <a href="#chapters" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-2xl border border-gold-300/35 bg-obsidian-800/75 px-7 py-4 text-base sm:text-lg font-bold text-gold-200 hover:border-gold-400 hover:bg-obsidian-800 hover:text-ivory transition-all">
+                                <span>مشاهده کامل ۱۷ فصل</span>
+                                <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ستون نمایش باشکوه لوگوی ققنوس و کتاب -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-[360px] sm:max-w-[400px]">
+                            <!-- هاله نورانی پشت لوگو -->
+                            <div class="absolute inset-0 rounded-[2.2rem] bg-gradient-to-tr from-gold-500/25 via-gold-300/15 to-transparent blur-2xl"></div>
+
+                            <!-- قاب لوکس طلایی -->
+                            <div class="relative rounded-[2rem] border border-gold-300/35 bg-gradient-to-b from-obsidian-800/95 via-obsidian-950 to-obsidian-950 p-7 sm:p-9 shadow-gold-intense">
+                                <!-- تزئینات گوشه‌های قاب -->
+                                <span class="absolute top-3 right-3 h-5 w-5 border-t-2 border-r-2 border-gold-400/70 rounded-tr-lg"></span>
+                                <span class="absolute top-3 left-3 h-5 w-5 border-t-2 border-l-2 border-gold-400/70 rounded-tl-lg"></span>
+                                <span class="absolute bottom-3 right-3 h-5 w-5 border-b-2 border-r-2 border-gold-400/70 rounded-br-lg"></span>
+                                <span class="absolute bottom-3 left-3 h-5 w-5 border-b-2 border-l-2 border-gold-400/70 rounded-bl-lg"></span>
+
+                                <!-- تصویر لوگو + Fallback خودکار SVG -->
+                                <div class="animate-float-slow mx-auto aspect-square w-full max-w-[270px] flex items-center justify-center rounded-2xl bg-obsidian-950 p-3">
+                                    <img
+                                        src="IMG_20261118_100631_143.jpg"
+                                        alt="نماد ققنوس و کتاب مقدس گروه باور"
+                                        class="h-full w-full object-contain mix-blend-lighten"
+                                        onerror="handleLogoFallback(this)"
+                                    />
+                                </div>
+
+                                <div class="mt-5 border-t border-gold-300/15 pt-4 text-center">
+                                    <p class="text-xs font-bold tracking-[0.28em] text-gold-300 uppercase">BAVAR GROUP ENCYCLOPEDIA</p>
+                                    <p class="mt-1.5 text-sm font-medium text-warmgray">
+                                        نسخه جامع ۱۷ فصلی • بومی‌سازی‌شده برای اقتصاد ایران
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نوار اعتبار و آمار کلیدی (۴ کارت) -->
+                <div class="mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div class="reveal luxury-card rounded-2xl p-6 text-center sm:text-right">
+                        <div class="text-2xl sm:text-3xl font-black text-gold-gradient">۱۷ فصل طوفانی</div>
+                        <p class="mt-2 text-sm leading-6 text-warmgray">جامع‌ترین دایرةالمعارف موفقیت تا اَبَررهبری</p>
+                    </div>
+                    <div class="reveal luxury-card rounded-2xl p-6 text-center sm:text-right">
+                        <div class="text-2xl sm:text-3xl font-black text-gold-gradient">۲۱ محور تخصصی</div>
+                        <p class="mt-2 text-sm leading-6 text-warmgray">کامل‌ترین دوره بیزینس بومی‌سازی‌شده در تاریخ ایران</p>
+                    </div>
+                    <div class="reveal luxury-card rounded-2xl p-6 text-center sm:text-right">
+                        <div class="text-2xl sm:text-3xl font-black text-gold-gradient">+۲ سال پژوهش</div>
+                        <p class="mt-2 text-sm leading-6 text-warmgray">حاصل همکاری با صدها استاد دانشگاه شریف، الزهرا و بزرگان اقتصاد</p>
+                    </div>
+                    <div class="reveal luxury-card rounded-2xl p-6 text-center sm:text-right">
+                        <div class="text-2xl sm:text-3xl font-black text-gold-gradient">۵۰۰ میلیون تا ۱ میلیارد</div>
+                        <p class="mt-2 text-sm leading-6 text-warmgray">ارزش دانش کوچینگی که یکجا در اختیار شما قرار می‌گیرد</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ۳. بخش ارزش پیشنهادی و تمایز (چرا کتاب مقدس گروه باور؟) -->
+        <section id="why-bavar" class="relative py-20 lg:py-28 border-t border-gold-300/10 bg-obsidian-900/60">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="reveal max-w-3xl mx-auto text-center">
+                    <span class="inline-block rounded-full border border-gold-300/30 bg-gold-400/10 px-4 py-1.5 text-xs font-bold text-gold-300">
+                        تفاوت بنیادین با هرآنچه تا امروز دیده‌اید
+                    </span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black text-ivory">
+                        چرا <span class="text-gold-gradient">کتاب مقدس گروه باور</span> بی‌رقیب است؟
+                    </h2>
+                    <p class="mt-5 text-base sm:text-lg leading-8 text-warmgray">
+                        این اَبَردوره یک کتاب معمولی یا مجموعه شعارهای انگیزشی نیست؛ بلکه حاصل بیش از دو سال تلاش شبانه‌روزی تیم گروه توسعه کسب‌وکار باور، همکاری با اساتید تراز اول دانشگاه‌های بزرگ کشور و کالبدشکافی زیست واقعی صاحبان ثروت و قدرت است.
+                    </p>
+                </div>
+
+                <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- کارت تمایز ۱ -->
+                    <div class="reveal luxury-card rounded-2xl p-7">
+                        <div class="flex h-13 w-13 items-center justify-center rounded-xl border border-gold-300/30 bg-gold-400/10 text-gold-300 p-3 w-fit">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-extrabold text-ivory">همکاری با اساتید شریف و الزهرا</h3>
+                        <p class="mt-3 text-sm leading-7 text-warmgray">
+                            تدوین‌شده با مشارکت اساتید تراز اول <strong class="text-gold-200">دانشگاه صنعتی شریف</strong>، <strong class="text-gold-200">دانشگاه الزهرا</strong>، صدها استاد دانشگاهی برجسته و مقالات علمی روز دنیا در حوزه نوروساینس و مدیریت.
+                        </p>
+                    </div>
+
+                    <!-- کارت تمایز ۲ -->
+                    <div class="reveal luxury-card rounded-2xl p-7">
+                        <div class="flex items-center justify-center rounded-xl border border-gold-300/30 bg-gold-400/10 text-gold-300 p-3 w-fit">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-extrabold text-ivory">عصاره تجربیات محرمانه بزرگان</h3>
+                        <p class="mt-3 text-sm leading-7 text-warmgray">
+                            دسترسی بی‌واسطه به ذهنیت، استراتژی‌های طلایی و دلایل رشد انفجاری بزرگ‌ترین ثروتمندان و صاحبان قدرت در ایران و جهان؛ دانشی که هرگز در کتاب‌های عمومی فاش نمی‌شود.
+                        </p>
+                    </div>
+
+                    <!-- کارت تمایز ۳ -->
+                    <div class="reveal luxury-card rounded-2xl p-7">
+                        <div class="flex items-center justify-center rounded-xl border border-gold-300/30 bg-gold-400/10 text-gold-300 p-3 w-fit">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-extrabold text-ivory">۱۰۰٪ بومی‌سازی‌شده برای ایران</h3>
+                        <p class="mt-3 text-sm leading-7 text-warmgray">
+                            نسخه‌های ترجمه‌شده در اقتصاد پربحران ایران جواب نمی‌دهند! تمامی استراتژی‌های کسب‌وکار، تجارت و نبرد رقابتی دقیقاً برای شرایط خاص، سخت و واقعی بازار ایران طراحی شده است.
+                        </p>
+                    </div>
+
+                    <!-- کارت تمایز ۴ -->
+                    <div class="reveal luxury-card rounded-2xl p-7">
+                        <div class="flex items-center justify-center rounded-xl border border-gold-300/30 bg-gold-400/10 text-gold-300 p-3 w-fit">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-5 text-lg font-extrabold text-ivory">جایگزین کوچینگ‌های میلیاردی</h3>
+                        <p class="mt-3 text-sm leading-7 text-warmgray">
+                            دانش ساختارمند و پیاده‌سازی‌شده‌ای که بسیاری تنها برای بخشی از آن ۵۰۰ میلیون تا یک میلیارد تومان دریافت می‌کنند، اینجا کامل، بی‌حاشیه و یکجا در اختیار شماست.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ۴. بخش تعاملی «نقشه راه ۵ گامی و ۱۷ فصل طوفانی دوره» -->
+        <section id="chapters" class="relative py-20 lg:py-28 border-t border-gold-300/10 bg-obsidian-950">
+            <div class="ambient-orb absolute top-1/3 left-0 h-96 w-96 rounded-full bg-gold-400/10"></div>
+
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="reveal max-w-3xl mx-auto text-center">
+                    <span class="inline-block rounded-full border border-gold-300/30 bg-gold-400/10 px-4 py-1.5 text-xs font-bold text-gold-300">
+                        سرفصل‌های کامل دایرةالمعارف
+                    </span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black text-ivory">
+                        نقشه راه ۵ گامی و <span class="text-gold-gradient">۱۷ فصل طوفانی</span> دوره
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg leading-8 text-warmgray">
+                        از استحکام روح و بازنویسی مغز تا ساخت امپراتوری کسب‌وکار، نفوذ در حلقه بزرگان و اَبَررهبری؛ هر گام را انتخاب کنید و جزئیات تمام فصل‌ها را ببینید.
+                    </p>
+                </div>
+
+                <!-- تب‌های فیلتر تعاملی ۵ گام -->
+                <div id="step-filters" class="reveal mt-10 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+                    <button type="button" data-step="all" class="step-filter-btn active rounded-xl border border-gold-400 bg-gradient-to-l from-gold-300 to-gold-500 px-4 py-2.5 text-xs sm:text-sm font-extrabold text-obsidian-950 shadow-gold-soft transition-all">
+                        همه ۱۷ فصل
+                    </button>
+                    <button type="button" data-step="1" class="step-filter-btn rounded-xl border border-gold-300/25 bg-obsidian-800 px-4 py-2.5 text-xs sm:text-sm font-bold text-warmgray hover:border-gold-300/60 hover:text-gold-200 transition-all">
+                        گام ۱: روح، ذهن و شخصیت
+                    </button>
+                    <button type="button" data-step="2" class="step-filter-btn rounded-xl border border-gold-300/25 bg-obsidian-800 px-4 py-2.5 text-xs sm:text-sm font-bold text-warmgray hover:border-gold-300/60 hover:text-gold-200 transition-all">
+                        گام ۲: ارتباطات و کسب‌وکار
+                    </button>
+                    <button type="button" data-step="3" class="step-filter-btn rounded-xl border border-gold-300/25 bg-obsidian-800 px-4 py-2.5 text-xs sm:text-sm font-bold text-warmgray hover:border-gold-300/60 hover:text-gold-200 transition-all">
+                        گام ۳: سرمایه‌گذاری
+                    </button>
+                    <button type="button" data-step="4" class="step-filter-btn rounded-xl border border-gold-300/25 bg-obsidian-800 px-4 py-2.5 text-xs sm:text-sm font-bold text-warmgray hover:border-gold-300/60 hover:text-gold-200 transition-all">
+                        گام ۴: قدرت، نبرد و نخبگان
+                    </button>
+                    <button type="button" data-step="5" class="step-filter-btn rounded-xl border border-gold-300/25 bg-obsidian-800 px-4 py-2.5 text-xs sm:text-sm font-bold text-warmgray hover:border-gold-300/60 hover:text-gold-200 transition-all">
+                        گام ۵: تجارت و اَبَررهبری
+                    </button>
+                </div>
+
+                <!-- عنوان گام انتخاب‌شده (پویا) -->
+                <div id="active-step-banner" class="mt-8 hidden rounded-2xl border border-gold-300/25 bg-obsidian-800/70 px-6 py-4 text-center">
+                    <p id="active-step-title" class="text-base sm:text-lg font-extrabold text-gold-300"></p>
+                    <p id="active-step-desc" class="mt-1 text-sm text-warmgray"></p>
+                </div>
+
+                <!-- شبکه کارت‌های ۱۷ فصل (تولید پویا با جاوااسکریپت) -->
+                <div id="chapters-grid" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- کارت‌ها توسط JS بارگذاری می‌شوند -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ۵. بخش ویژه «کالبدشکافی فصل ششم: جهان عظیم کسب‌وکار (۲۱ محور ساخت امپراتوری)» -->
+        <section id="business-world" class="relative py-20 lg:py-28 border-t border-gold-300/15 bg-gradient-to-b from-obsidian-900 via-obsidian-950 to-obsidian-900">
+            <div class="ambient-orb absolute top-20 right-1/3 h-80 w-80 rounded-full bg-gold-400/12"></div>
+
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="reveal max-w-4xl mx-auto text-center">
+                    <span class="inline-flex items-center gap-2 rounded-full border border-gold-400/40 bg-gold-400/15 px-4 py-1.5 text-xs sm:text-sm font-extrabold text-gold-200">
+                        کالبدشکافی مهم‌ترین و عظیم‌ترین بخش کتاب مقدس گروه باور
+                    </span>
+                    <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black text-ivory leading-tight">
+                        فصل ششم: <span class="text-gold-gradient">جهان عظیم کسب‌وکار</span>
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg leading-8 text-warmgray">
+                        در حالی که تا امروز کل دانش بیزینس در ایران در ۵ سرفصل خلاصه می‌شد، گروه باور با همکاری صدها استاد دانشگاه، نقشه ساخت امپراتوری کسب‌وکار را در <strong class="text-gold-300">۲۱ محور تخصصی</strong> تدوین کرده است؛ تا چه از صفر شروع کنید و چه کسب‌وکاری متوقف‌شده داشته باشید، به یک <strong class="text-ivory">اَبَرکوچ فوق‌حرفه‌ای</strong> تبدیل شوید.
+                    </p>
+                </div>
+
+                <!-- نوار جستجو و فیلتر سریع محورهای فصل ۶ -->
+                <div class="reveal mt-10 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 rounded-2xl border border-gold-300/20 bg-obsidian-800/80 p-4 backdrop-blur-md">
+                    <!-- فیلد جستجو -->
+                    <div class="relative flex-1">
+                        <svg class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gold-300/70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                        <input
+                            id="pillar-search"
+                            type="text"
+                            placeholder="جستجو در محورهای کسب‌وکار (مثلاً: فروش، برندسازی، سیستم‌سازی، صادرات، ایران...)"
+                            class="w-full rounded-xl border border-gold-300/20 bg-obsidian-950 py-3 pr-11 pl-4 text-sm text-ivory placeholder-warmgray/70 focus:border-gold-400 focus:outline-none focus:ring-1 focus:ring-gold-400 transition-colors"
+                        />
+                    </div>
+
+                    <!-- فیلتر دسته‌بندی سریع -->
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button type="button" data-cat="all" class="pillar-cat-btn active rounded-xl border border-gold-400 bg-gold-400/20 px-3.5 py-2 text-xs font-bold text-gold-200 transition-all">همه (۲۱)</button>
+                        <button type="button" data-cat="foundation" class="pillar-cat-btn rounded-xl border border-gold-300/20 bg-obsidian-900 px-3.5 py-2 text-xs font-semibold text-warmgray hover:text-gold-200 transition-all">بنیان و برند</button>
+                        <button type="button" data-cat="sales" class="pillar-cat-btn rounded-xl border border-gold-300/20 bg-obsidian-900 px-3.5 py-2 text-xs font-semibold text-warmgray hover:text-gold-200 transition-all">فروش و مشتری</button>
+                        <button type="button" data-cat="systems" class="pillar-cat-btn rounded-xl border border-gold-300/20 bg-obsidian-900 px-3.5 py-2 text-xs font-semibold text-warmgray hover:text-gold-200 transition-all">سیستم و مدیریت</button>
+                        <button type="button" data-cat="strategy" class="pillar-cat-btn rounded-xl border border-gold-300/20 bg-obsidian-900 px-3.5 py-2 text-xs font-semibold text-warmgray hover:text-gold-200 transition-all">استراتژی و ایران</button>
+                    </div>
+                </div>
+
+                <!-- شبکه ۲۱ محور کسب‌وکار -->
+                <div id="pillars-grid" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- کارت‌ها توسط JS بارگذاری می‌شوند -->
+                </div>
+
+                <!-- پیام نبود نتیجه در جستجو -->
+                <div id="pillars-empty" class="hidden mt-8 rounded-2xl border border-gold-300/20 bg-obsidian-800/60 p-8 text-center text-warmgray">
+                    محوری با این عبارت یافت نشد. لطفاً عبارت دیگری جستجو کنید یا فیلتر را روی «همه» بگذارید.
+                </div>
+            </div>
+        </section>
+
+        <!-- ۶. بخش سه غول ثروت‌ساز (ویترین بصری فصل ۸) -->
+        <section id="wealth-giants" class="relative py-20 lg:py-28 border-t border-gold-300/10 bg-obsidian-950">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="reveal max-w-3xl mx-auto text-center">
+                    <span class="inline-block rounded-full border border-gold-300/30 bg-gold-400/10 px-4 py-1.5 text-xs font-bold text-gold-300">
+                        ویترین تخصصی فصل هشتم
+                    </span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black text-ivory">
+                        تسلط بر <span class="text-gold-gradient">سه غول ثروت‌ساز</span> سرمایه‌گذاری
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg leading-8 text-warmgray">
+                        هیچ‌کس صرفاً با پول درآوردن ثروتمند نشده است؛ ثروت قطعی زمانی شکل می‌گیرد که بر سه بازار کلیدی و سرنوشت‌ساز زیر تسلط مطلق پیدا کنید.
+                    </p>
+                </div>
+
+                <div class="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-7">
+                    <!-- غول ۱: ملک -->
+                    <div class="reveal group relative overflow-hidden rounded-3xl border border-gold-300/25 bg-gradient-to-b from-obsidian-800 via-obsidian-900 to-obsidian-950 p-8 transition-all duration-300 hover:border-gold-400 hover:-translate-y-1.5 hover:shadow-gold-glow">
+                        <div class="absolute -left-10 -top-10 h-36 w-36 rounded-full bg-gold-400/10 blur-2xl group-hover:bg-gold-400/20 transition-all"></div>
+                        <div class="relative">
+                            <div class="flex items-center justify-between">
+                                <span class="flex h-16 w-16 items-center justify-center rounded-2xl border border-gold-300/40 bg-obsidian-950 text-gold-300 shadow-gold-soft">
+                                    <!-- آیکون اختصاصی SVG ملک -->
+                                    <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                                    </svg>
+                                </span>
+                                <span class="rounded-full border border-gold-400/40 bg-gold-400/15 px-3.5 py-1 text-xs font-extrabold text-gold-200">
+                                    بازار اول
+                                </span>
+                            </div>
+                            <h3 class="mt-7 text-2xl font-black text-ivory">ملک و املاک</h3>
+                            <p class="mt-1.5 text-sm font-bold text-gold-300">شاهِ شاهان بازارهای سرمایه‌گذاری</p>
+                            <p class="mt-4 text-sm leading-7 text-warmgray">
+                                اصول شکار فرصت‌های طلایی ملکی، تحلیل چرخه‌های رکود و رونق، تبدیل سرمایه به دارایی‌های مولد و مستحکم که پایه و ستون اصلی امپراتوری ثروت شما را در برابر تورم و بحران‌ها بیمه می‌کند.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- غول ۲: طلا و نقره -->
+                    <div class="reveal group relative overflow-hidden rounded-3xl border border-gold-400/45 bg-gradient-to-b from-obsidian-800 via-obsidian-900 to-obsidian-950 p-8 shadow-gold-soft transition-all duration-300 hover:border-gold-300 hover:-translate-y-1.5 hover:shadow-gold-intense">
+                        <div class="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-gold-300/15 blur-2xl group-hover:bg-gold-300/25 transition-all"></div>
+                        <div class="relative">
+                            <div class="flex items-center justify-between">
+                                <span class="flex h-16 w-16 items-center justify-center rounded-2xl border border-gold-400/60 bg-gradient-to-br from-gold-300/20 to-obsidian-950 text-gold-200 shadow-gold-soft">
+                                    <!-- آیکون اختصاصی SVG طلا و نقره -->
+                                    <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l3-6h6l3 6H3zm9 0l3-6h6l-3 6h-6zM7.5 11l2.5-5h4l2.5 5h-9z" />
+                                    </svg>
+                                </span>
+                                <span class="rounded-full border border-gold-400/50 bg-gold-400/20 px-3.5 py-1 text-xs font-extrabold text-gold-200">
+                                    بازار دوم
+                                </span>
+                            </div>
+                            <h3 class="mt-7 text-2xl font-black text-gold-gradient">فلزات گران‌بها (طلا و نقره)</h3>
+                            <p class="mt-1.5 text-sm font-bold text-gold-300">اعلی‌حضرت‌های دنیای ثروت</p>
+                            <p class="mt-4 text-sm leading-7 text-warmgray">
+                                استراتژی‌های هوشمندانه ورود و خروج در بازار طلا و نقره؛ حفظ قدرت خرید در طوفان‌های اقتصادی و بهره‌گیری از نقدشوندگی بی‌نظیر اعلی‌حضرت‌های فلزات گران‌بها برای رشد مطمئن دارایی.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- غول ۳: بازارهای مالی و ارزهای دیجیتال -->
+                    <div class="reveal group relative overflow-hidden rounded-3xl border border-gold-300/25 bg-gradient-to-b from-obsidian-800 via-obsidian-900 to-obsidian-950 p-8 transition-all duration-300 hover:border-gold-400 hover:-translate-y-1.5 hover:shadow-gold-glow">
+                        <div class="absolute -left-10 -top-10 h-36 w-36 rounded-full bg-gold-400/10 blur-2xl group-hover:bg-gold-400/20 transition-all"></div>
+                        <div class="relative">
+                            <div class="flex items-center justify-between">
+                                <span class="flex h-16 w-16 items-center justify-center rounded-2xl border border-gold-300/40 bg-obsidian-950 text-gold-300 shadow-gold-soft">
+                                    <!-- آیکون اختصاصی SVG بازار مالی و دیجیتال -->
+                                    <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                                    </svg>
+                                </span>
+                                <span class="rounded-full border border-gold-400/40 bg-gold-400/15 px-3.5 py-1 text-xs font-extrabold text-gold-200">
+                                    بازار سوم
+                                </span>
+                            </div>
+                            <h3 class="mt-7 text-2xl font-black text-ivory">بازارهای مالی و ارزهای دیجیتال</h3>
+                            <p class="mt-1.5 text-sm font-bold text-gold-300">پرریسک، اما به‌شدت اغواگر و سودآور</p>
+                            <p class="mt-4 text-sm leading-7 text-warmgray">
+                                شناخت قواعد بازی در بازارهای مدرن مالی و کریپتو؛ مدیریت ریسک حرفه‌ای، پرهیز از تله‌های هیجانی و شکار سودهای جهشی برای تکمیل سبد سرمایه‌گذاری یک ثروتمند مدرن.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ۷. بخش «سرمایه‌گذاری زنده + تضمین قاطع گروه باور» -->
+        <section id="guarantee" class="relative py-20 lg:py-24 border-t border-gold-300/10 bg-obsidian-900/70">
+            <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+                <div class="reveal relative overflow-hidden rounded-[2rem] border-2 border-gold-400/50 bg-gradient-to-br from-obsidian-800 via-obsidian-950 to-obsidian-900 p-8 sm:p-12 lg:p-14 shadow-gold-intense">
+                    <!-- نور پس‌زمینه طلایی -->
+                    <div class="ambient-orb absolute -top-20 -right-20 h-64 w-64 rounded-full bg-gold-400/20"></div>
+                    <div class="ambient-orb absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-gold-500/15"></div>
+
+                    <div class="relative flex flex-col items-center text-center">
+                        <!-- مهر طلایی تضمین -->
+                        <div class="flex h-20 w-20 items-center justify-center rounded-full border-2 border-gold-300 bg-obsidian-950 text-gold-300 shadow-gold-glow">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                            </svg>
+                        </div>
+
+                        <span class="mt-5 inline-block rounded-full border border-gold-300/40 bg-gold-400/15 px-4 py-1 text-xs font-extrabold text-gold-200">
+                            سرمایه‌گذاری زنده + تضمین قاطع
+                        </span>
+
+                        <h2 class="mt-4 text-2xl sm:text-3xl lg:text-4xl font-black text-gold-gradient leading-snug">
+                            این پایان ماجرا نیست؛ یک دایرةالمعارف زنده و همیشه در حال رشد!
+                        </h2>
+
+                        <p class="mt-6 max-w-3xl text-base sm:text-lg leading-9 text-ivory/95 font-medium">
+                            «این دایرةالمعارف ایستا نیست و به‌طور مستمر گسترش می‌یابد و بخش‌های ارزشمند جدیدی به آن اضافه می‌شود. اگر این دوره را با دقت گوش دهید، یادداشت‌برداری کنید و اجرا نمایید، سطح دانشی، شخصیتی و مالی شما به‌طور انفجاری متحول شده و ورودتان به جمع ثروتمندان و قدرتمندان قطعی خواهد بود.»
+                        </p>
+
+                        <div class="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm font-bold text-gold-200">
+                            <span class="flex items-center gap-2 rounded-xl border border-gold-300/25 bg-obsidian-900/90 px-4 py-2.5">
+                                <span class="text-gold-400">✦</span> گسترش مداوم و افزودن آموزش‌های جدید
+                            </span>
+                            <span class="flex items-center gap-2 rounded-xl border border-gold-300/25 bg-obsidian-900/90 px-4 py-2.5">
+                                <span class="text-gold-400">✦</span> تضمین تحول انفجاری با اجرا و یادداشت‌برداری
+                            </span>
+                            <span class="flex items-center gap-2 rounded-xl border border-gold-300/25 bg-obsidian-900/90 px-4 py-2.5">
+                                <span class="text-gold-400">✦</span> پشتوانه بیش از ۲ سال پژوهش گروه باور
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ۸. بخش فروش، ثبت‌نام و مشاوره (Conversion / Checkout CTA Box) -->
+        <section id="register" class="relative py-20 lg:py-28 border-t border-gold-300/10 bg-obsidian-950 bg-royal-grid">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="reveal text-center max-w-3xl mx-auto">
+                    <span class="inline-block rounded-full border border-gold-300/35 bg-gold-400/15 px-4 py-1.5 text-xs font-extrabold text-gold-200">
+                        اقدام قاطع برای ورود به سطح نخبگان
+                    </span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black text-ivory">
+                        دریافت نسخه کامل <span class="text-gold-gradient">کتاب مقدس گروه باور</span>
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg text-warmgray">
+                        انتخاب امروز شما، جایگاه فردای شما را تعیین می‌کند. مشخصات خود را ثبت کنید تا شرایط تهیه دوره و لینک دسترسی اختصاصی برای شما ارسال شود.
+                    </p>
+                </div>
+
+                <div class="reveal mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                    <!-- ستون راست: امکانات دریافتی و ارزش دوره -->
+                    <div class="lg:col-span-6 flex flex-col justify-between rounded-3xl border border-gold-300/30 bg-gradient-to-b from-obsidian-800 to-obsidian-900 p-7 sm:p-9 shadow-gold-soft">
+                        <div>
+                            <div class="flex items-center justify-between gap-4 border-b border-gold-300/15 pb-6">
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl font-black text-ivory">پکیج جامع کتاب مقدس گروه باور</h3>
+                                    <p class="mt-1 text-xs sm:text-sm text-gold-300">بنیان‌گذار: آرش الطافیان • نسخه کامل</p>
+                                </div>
+                                <span class="rounded-xl border border-gold-400/40 bg-gold-400/15 px-3 py-1.5 text-xs font-extrabold text-gold-200 whitespace-nowrap">
+                                    دسترسی کامل
+                                </span>
+                            </div>
+
+                            <ul class="mt-6 space-y-4 text-sm sm:text-base text-ivory/90">
+                                <li class="flex items-start gap-3">
+                                    <span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-gold-300">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                    </span>
+                                    <span><strong class="text-gold-200">دسترسی کامل به هر ۱۷ فصل طوفانی:</strong> از اتصال به خدا و بازطراحی مغز تا قدرت، جنگ، تجارت و اَبَررهبری</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-gold-300">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                    </span>
+                                    <span><strong class="text-gold-200">کالبدشکافی کامل ۲۱ محور جهان کسب‌وکار:</strong> جامع‌ترین آموزش بیزینس و اَبَرکوچینگ تاریخ ایران</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-gold-300">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                    </span>
+                                    <span><strong class="text-gold-200">دریافت آپدیت‌ها و گسترش‌های آینده دوره:</strong> بهره‌مندی از بخش‌ها و آموزش‌های جدیدی که به این دایرةالمعارف زنده اضافه می‌شود</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-gold-300">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                    </span>
+                                    <span><strong class="text-gold-200">۱۰۰٪ بومی‌سازی‌شده برای اقتصاد ایران:</strong> استراتژی‌های جنگی ویژه بازار پربحران، سخت و خاص ایران</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-gold-300">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                    </span>
+                                    <span><strong class="text-gold-200">اسرار حلقه بزرگان و سه غول سرمایه‌گذاری:</strong> ملک، طلا و نقره، بازارهای مالی و شبکه‌سازی سطح بالا</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- دکمه‌های دسترسی مستقیم به سایت و کانال رسمی -->
+                        <div class="mt-8 border-t border-gold-300/15 pt-6">
+                            <p class="text-xs font-semibold text-warmgray mb-3">دسترسی سریع به درگاه‌های رسمی گروه توسعه کسب‌وکار باور:</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <a href="#official-site" onclick="handleOfficialLink(event, 'سایت رسمی گروه باور')" class="inline-flex items-center justify-center gap-2 rounded-xl border border-gold-300/35 bg-obsidian-950 px-4 py-3 text-xs sm:text-sm font-bold text-gold-200 hover:border-gold-400 hover:bg-obsidian-800 transition-all">
+                                    <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253" />
+                                    </svg>
+                                    <span>ورود به سایت رسمی گروه باور</span>
+                                </a>
+                                <a href="#official-telegram" onclick="handleOfficialLink(event, 'کانال رسمی تلگرام گروه باور')" class="inline-flex items-center justify-center gap-2 rounded-xl border border-gold-300/35 bg-obsidian-950 px-4 py-3 text-xs sm:text-sm font-bold text-gold-200 hover:border-gold-400 hover:bg-obsidian-800 transition-all">
+                                    <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                    </svg>
+                                    <span>عضویت در کانال رسمی تلگرام</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ستون چپ: فرم تعاملی پیش‌ثبت‌نام و دریافت شرایط تهیه دوره -->
+                    <div class="lg:col-span-6 rounded-3xl border border-gold-400/40 bg-obsidian-800/95 p-7 sm:p-9 shadow-gold-glow">
+                        <div id="form-container">
+                            <h3 class="text-xl sm:text-2xl font-black text-gold-gradient">
+                                پیش‌ثبت‌نام و دریافت شرایط تهیه دوره
+                            </h3>
+                            <p class="mt-2 text-sm text-warmgray leading-6">
+                                فرم زیر را تکمیل کنید تا کارشناسان ارشد گروه باور، شرایط ویژه ثبت‌نام و لینک دریافت دوره را مستقیماً در اختیار شما قرار دهند.
+                            </p>
+
+                            <form id="registration-form" class="mt-7 space-y-5" novalidate>
+                                <!-- نام و نام خانوادگی -->
+                                <div>
+                                    <label for="fullName" class="block text-sm font-bold text-ivory mb-2">نام و نام خانوادگی</label>
+                                    <input
+                                        id="fullName"
+                                        name="fullName"
+                                        type="text"
+                                        required
+                                        placeholder="مثلاً: امیرحسین رضایی"
+                                        class="w-full rounded-xl border border-gold-300/25 bg-obsidian-950 px-4 py-3.5 text-sm text-ivory placeholder-warmgray/60 focus:border-gold-400 focus:outline-none focus:ring-1 focus:ring-gold-400 transition-colors"
+                                    />
+                                </div>
+
+                                <!-- شماره تماس -->
+                                <div>
+                                    <label for="phone" class="block text-sm font-bold text-ivory mb-2">شماره تماس (موبایل)</label>
+                                    <input
+                                        id="phone"
+                                        name="phone"
+                                        type="tel"
+                                        dir="ltr"
+                                        required
+                                        placeholder="0912 345 6789"
+                                        class="w-full rounded-xl border border-gold-300/25 bg-obsidian-950 px-4 py-3.5 text-sm text-right text-ivory placeholder-warmgray/60 focus:border-gold-400 focus:outline-none focus:ring-1 focus:ring-gold-400 transition-colors"
+                                    />
+                                </div>
+
+                                <!-- وضعیت فعلی کاربر -->
+                                <div>
+                                    <label for="userStatus" class="block text-sm font-bold text-ivory mb-2">وضعیت فعلی شما</label>
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" role="radiogroup" aria-label="وضعیت فعلی کاربر">
+                                        <label class="status-option cursor-pointer">
+                                            <input type="radio" name="userStatus" value="شروع از صفر" class="peer sr-only" checked />
+                                            <div class="rounded-xl border border-gold-300/25 bg-obsidian-950 px-3 py-3 text-center text-xs sm:text-sm font-bold text-warmgray peer-checked:border-gold-400 peer-checked:bg-gold-400/15 peer-checked:text-gold-200 transition-all">
+                                                شروع از صفر
+                                            </div>
+                                        </label>
+                                        <label class="status-option cursor-pointer">
+                                            <input type="radio" name="userStatus" value="صاحب کسب‌وکار" class="peer sr-only" />
+                                            <div class="rounded-xl border border-gold-300/25 bg-obsidian-950 px-3 py-3 text-center text-xs sm:text-sm font-bold text-warmgray peer-checked:border-gold-400 peer-checked:bg-gold-400/15 peer-checked:text-gold-200 transition-all">
+                                                صاحب کسب‌وکار
+                                            </div>
+                                        </label>
+                                        <label class="status-option cursor-pointer">
+                                            <input type="radio" name="userStatus" value="سرمایه‌گذار و مدیر" class="peer sr-only" />
+                                            <div class="rounded-xl border border-gold-300/25 bg-obsidian-950 px-3 py-3 text-center text-xs sm:text-sm font-bold text-warmgray peer-checked:border-gold-400 peer-checked:bg-gold-400/15 peer-checked:text-gold-200 transition-all">
+                                                سرمایه‌گذار و مدیر
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- پیام خطای اعتبارسنجی -->
+                                <div id="form-error" class="hidden rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-xs sm:text-sm font-medium text-red-300"></div>
+
+                                <!-- دکمه ارسال -->
+                                <button type="submit" class="btn-gold-shimmer w-full rounded-2xl py-4 text-base font-black shadow-gold-glow">
+                                    ثبت درخواست و دریافت شرایط دوره
+                                </button>
+
+                                <p class="text-center text-xs text-warmgray/80">
+                                    اطلاعات شما کاملاً محرمانه بوده و صرفاً جهت ارسال شرایط ثبت‌نام گروه باور استفاده می‌شود.
+                                </p>
+                            </form>
+                        </div>
+
+                        <!-- پیام تایید شیک پس از ثبت موفق فرم -->
+                        <div id="form-success" class="hidden flex-col items-center justify-center text-center py-8">
+                            <div class="flex h-20 w-20 items-center justify-center rounded-full border-2 border-gold-400 bg-gold-400/15 text-gold-300 shadow-gold-glow">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-black text-gold-gradient">درخواست شما با موفقیت ثبت شد!</h3>
+                            <p id="success-message-text" class="mt-3 text-sm sm:text-base leading-7 text-ivory/90 max-w-md"></p>
+                            <div class="mt-6 w-full rounded-2xl border border-gold-300/25 bg-obsidian-950 p-4 text-xs sm:text-sm text-warmgray space-y-1.5 text-right">
+                                <div class="flex justify-between">
+                                    <span>کد پیگیری اختصاصی:</span>
+                                    <span id="tracking-code" class="font-mono font-bold text-gold-300"></span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>وضعیت انتخاب‌شده:</span>
+                                    <span id="confirmed-status" class="font-bold text-ivory"></span>
+                                </div>
+                            </div>
+                            <button type="button" id="reset-form-btn" class="mt-6 rounded-xl border border-gold-300/30 bg-obsidian-900 px-6 py-2.5 text-xs sm:text-sm font-bold text-gold-300 hover:border-gold-400 hover:bg-obsidian-800 transition-all">
+                                ثبت درخواست جدید
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ۹. بخش سوالات متداول (FAQ Accordion تعاملی) -->
+        <section id="faq" class="relative py-20 lg:py-28 border-t border-gold-300/10 bg-obsidian-900/60">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                <div class="reveal text-center">
+                    <span class="inline-block rounded-full border border-gold-300/30 bg-gold-400/10 px-4 py-1.5 text-xs font-bold text-gold-300">
+                        شفافیت کامل پیش از شروع
+                    </span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl font-black text-ivory">
+                        سوالات متداول درباره <span class="text-gold-gradient">کتاب مقدس گروه باور</span>
+                    </h2>
+                </div>
+
+                <div id="faq-list" class="reveal mt-12 space-y-4">
+                    <!-- آیتم ۱ -->
+                    <div class="accordion-item active luxury-card rounded-2xl">
+                        <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 sm:p-6 text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-ivory">تفاوت اصلی «کتاب مقدس گروه باور» با دوره‌های انگیزشی و کتاب‌های رایج موفقیت چیست؟</span>
+                            <span class="accordion-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-gold-300/30 bg-obsidian-950 text-gold-300 transition-transform duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="border-t border-gold-300/10 px-5 sm:px-6 py-5 text-sm sm:text-base leading-8 text-warmgray">
+                                    دوره‌های انگیزشی و کتاب‌های زرد صرفاً هیجان موقتی می‌سازند و خرافاتی مثل جابه‌جایی لوازم خانه را تبلیغ می‌کنند؛ اما «کتاب مقدس گروه باور» کاملاً مبتنی بر علوم شناختی (نوروساینس)، دانش صدها استاد دانشگاه‌های تراز اول (از جمله شریف و الزهرا) و تجربیات واقعی و بی‌تعارف ثروتمندان و قدرتمندان ایران و جهان است. اینجا هیچ حاشیه‌گویی وجود ندارد؛ تمام ۱۷ فصل، استراتژی‌های خالص، علمی و عملیاتی برای ثروت‌سازی، کسب‌وکار، نبرد رقابتی و قدرت هستند.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- آیتم ۲ -->
+                    <div class="accordion-item luxury-card rounded-2xl">
+                        <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 sm:p-6 text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-ivory">آیا این دوره برای افراد تازه‌کار که از صفر شروع می‌کنند مناسب است یا مخصوص صاحبان کسب‌وکار است؟</span>
+                            <span class="accordion-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-gold-300/30 bg-obsidian-950 text-gold-300 transition-transform duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="border-t border-gold-300/10 px-5 sm:px-6 py-5 text-sm sm:text-base leading-8 text-warmgray">
+                                    برای هر دو گروه به‌صورت کامل طراحی شده است. اگر از نقطه صفر شروع می‌کنید، از فصل ۱ (اتصال به خدا، بازطراحی مغز و شخصیت‌سازی) تا ایده‌پردازی و مدل کسب‌وکار، قدم‌به‌قدم ساخته می‌شوید. اگر هم اکنون صاحب کسب‌وکار، مدیر یا سرمایه‌گذار هستید، ۲۱ محور فصل ششم (سیستم‌سازی، مدیریت مالی، استراتژی‌های بحران ایران، صادرات)، سرمایه‌گذاری، شبکه‌سازی سطح بالا و اَبَررهبری شما را به یک اَبَرکوچ و فرمانده امپراتوری تبدیل می‌کند.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- آیتم ۳ -->
+                    <div class="accordion-item luxury-card rounded-2xl">
+                        <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 sm:p-6 text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-ivory">منظور از «سرمایه‌گذاری زنده» و آپدیت‌های مداوم دوره چیست؟</span>
+                            <span class="accordion-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-gold-300/30 bg-obsidian-950 text-gold-300 transition-transform duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="border-t border-gold-300/10 px-5 sm:px-6 py-5 text-sm sm:text-base leading-8 text-warmgray">
+                                    کتاب مقدس گروه باور یک فایل بسته و تمام‌شده نیست؛ بلکه یک دایرةالمعارف زنده است که همگام با تحولات بازار و پژوهش‌های جدید تیم گروه باور به‌طور مستمر گسترش می‌یابد و بخش‌ها و آموزش‌های ارزشمند جدیدی به آن افزوده می‌شود. با تهیه دوره، از این جریان دائمی رشد بهره‌مند خواهید شد.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- آیتم ۴ -->
+                    <div class="accordion-item luxury-card rounded-2xl">
+                        <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 sm:p-6 text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-ivory">با توجه به شرایط اقتصادی و بحران‌های بازار ایران، آیا این آموزش‌ها واقعاً قابل اجرا هستند؟</span>
+                            <span class="accordion-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-gold-300/30 bg-obsidian-950 text-gold-300 transition-transform duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="border-t border-gold-300/10 px-5 sm:px-6 py-5 text-sm sm:text-base leading-8 text-warmgray">
+                                    دقیقاً به همین دلیل مهم‌ترین بخش فصل ششم («استراتژی‌های بومی‌سازی‌شده برای ایران») و محور تفکر استراتژیک در بحران به‌صورت اختصاصی برای فضای پرالتهاب و پررقابت اقتصاد ایران نوشته شده است. علاوه‌برآن، در فصل ۱۶ تجربیات واقعی و مستقیم ثروتمندترین چهره‌های همین بازار (از جمله چهره‌های نامدار اقتصاد ایران) در اختیار شما قرار می‌گیرد.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- آیتم ۵ -->
+                    <div class="accordion-item luxury-card rounded-2xl">
+                        <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 sm:p-6 text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-ivory">نحوه تهیه دوره و دسترسی به تمامی ۱۷ فصل چگونه است؟</span>
+                            <span class="accordion-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-gold-300/30 bg-obsidian-950 text-gold-300 transition-transform duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="border-t border-gold-300/10 px-5 sm:px-6 py-5 text-sm sm:text-base leading-8 text-warmgray">
+                                    کافی است از طریق فرم پیش‌ثبت‌نام همین صفحه اقدام کنید یا از طریق کانال رسمی تلگرام و سایت رسمی گروه باور، شرایط تهیه نسخه کامل را دریافت نمایید. پس از نهایی‌سازی ثبت‌نام، دسترسی کامل به تمامی فصل‌ها و زیربخش‌های دایرةالمعارف برای شما فعال خواهد شد.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ۱۰. فوتر (Footer) لوکس -->
+    <footer class="relative border-t border-gold-300/20 bg-obsidian-950 pt-16 pb-10">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center text-center">
+                <!-- لوگوی فوتر -->
+                <div class="flex h-20 w-20 items-center justify-center rounded-2xl border border-gold-300/35 bg-obsidian-950 p-2 shadow-gold-soft">
+                    <img
+                        src="IMG_20261118_100631_143.jpg"
+                        alt="لوگوی گروه توسعه کسب‌وکار باور"
+                        class="h-full w-full object-contain rounded-xl mix-blend-lighten"
+                        onerror="handleLogoFallback(this)"
+                    />
+                </div>
+
+                <h3 class="mt-5 text-2xl sm:text-3xl font-black text-gold-gradient">
+                    انتخاب امروز شما، جایگاه فردای شما را تعیین می‌کند
+                </h3>
+
+                <p class="mt-3 text-sm sm:text-base font-bold text-ivory/90">
+                    گروه توسعه کسب‌وکار باور (BAVAR GROUP) — بنیان‌گذار: آرش الطافیان
+                </p>
+
+                <!-- لینک‌های سریع فوتر -->
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-warmgray">
+                    <a href="#why-bavar" class="hover:text-gold-300 transition-colors">معرفی دوره</a>
+                    <a href="#chapters" class="hover:text-gold-300 transition-colors">۱۷ فصل طوفانی</a>
+                    <a href="#business-world" class="hover:text-gold-300 transition-colors">۲۱ محور کسب‌وکار</a>
+                    <a href="#wealth-giants" class="hover:text-gold-300 transition-colors">سه غول سرمایه‌گذاری</a>
+                    <a href="#guarantee" class="hover:text-gold-300 transition-colors">تضمین قاطع</a>
+                    <a href="#register" class="hover:text-gold-300 transition-colors">ثبت‌نام</a>
+                </div>
+
+                <div class="mt-10 flex w-full flex-col sm:flex-row items-center justify-between gap-4 border-t border-gold-300/10 pt-8 text-xs text-warmgray/80">
+                    <p>© تمامی حقوق مادی و معنوی برای گروه توسعه کسب‌وکار باور (BAVAR GROUP) محفوظ است.</p>
+                    <button
+                        type="button"
+                        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                        class="inline-flex items-center gap-2 rounded-xl border border-gold-300/30 bg-obsidian-800 px-4 py-2 text-xs font-bold text-gold-300 hover:border-gold-400 hover:bg-obsidian-700 transition-all"
+                    >
+                        <span>بازگشت به بالا</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- پیام شناور اختصاصی (Toast Notification) به‌جای alert -->
+    <div id="toast-box" class="pointer-events-none fixed bottom-6 right-4 left-4 sm:right-auto sm:left-6 z-[80] flex justify-center sm:justify-start opacity-0 translate-y-4 transition-all duration-300">
+        <div class="pointer-events-auto flex items-center gap-3 rounded-2xl border border-gold-400/50 bg-obsidian-900/95 px-5 py-3.5 text-sm font-medium text-ivory shadow-gold-glow backdrop-blur-xl max-w-md">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-gold-300">✦</span>
+            <p id="toast-text" class="leading-6"></p>
+        </div>
+    </div>
+
+    <!-- اسکریپت‌های تعاملی صفحه -->
+    <script>
+        /**
+         * جایگزینی خودکار لوگوی SVG اختصاصی گروه باور در صورت عدم دسترسی به فایل JPG
+         * (بدون استفاده از base64 و کاملاً تمیز و برداری)
+         */
+        function handleLogoFallback(imgElement) {
+            try {
+                const template = document.getElementById('bavar-logo-svg-template');
+                if (!template || imgElement.dataset.fallbackApplied) return;
+                imgElement.dataset.fallbackApplied = 'true';
+                const svgClone = template.content.cloneNode(true);
+                const parent = imgElement.parentElement;
+                imgElement.classList.add('hidden');
+                parent.appendChild(svgClone);
+            } catch (err) {
+                console.error('Logo fallback error:', err);
+            }
+        }
+
+        /**
+         * داده‌های ۵ گام و هر ۱۷ فصل کتاب مقدس گروه باور
+         */
+        const stepMeta = {
+            1: {
+                title: 'گام اول: استحکام روح، بازنویسی مغز و تولد یک شخصیت شکست‌ناپذیر',
+                desc: 'پیش از ورود به میدان نبرد ثروت و قدرت، زیربنای معنوی، شناختی و شخصیتی شما از نو ساخته می‌شود.'
+            },
+            2: {
+                title: 'گام دوم: انقلاب در ارتباطات و ساخت امپراتوری کسب‌وکار',
+                desc: 'تبدیل شدن از یک فرد عادی به فرمانده یک شبکه ارتباطی قدرتمند و معمار یک امپراتوری تجاری.'
+            },
+            3: {
+                title: 'گام سوم: خلق ثروت ماندگار و تسلط بر بازارهای سرمایه‌گذاری',
+                desc: 'هیچ‌کس صرفاً با پول درآوردن ثروتمند نشده؛ اینجا پول شما را به کار می‌گیریم تا ثروت قطعی خلق شود.'
+            },
+            4: {
+                title: 'گام چهارم: ورود به حلقه خواص؛ قدرت، نبرد و شبکه‌سازی در سطوح بالا',
+                desc: 'ترسیم مرز میان مردم عادی و نخبگان جامعه؛ علومی که صاحبان قدرت هرگز نمی‌خواهند شما بدانید.'
+            },
+            5: {
+                title: 'گام پنجم: تجارت جهانی، اَبَررهبری و رازهای شکست‌ناپذیری',
+                desc: 'ابزارهای فرماندهان بزرگ تاریخ برای هدایت امپراتوری، فتح بازارهای جهانی و تبدیل شکست به پرش.'
+            }
+        };
+
+        const chaptersData = [
+            // گام ۱
+            {
+                num: '۰۱',
+                step: 1,
+                stepLabel: 'گام ۱: روح، ذهن و شخصیت',
+                title: 'اتصال به خدا',
+                subtitle: 'تنها کلید واقعی موفقیت و خوشبختی',
+                desc: 'پایه‌واساس ثروت و قدرت پایدار، جلوگیری از فروپاشی روحی در سرمایه‌های چندصدهزارمیلیاردی، استحکام روحی، ارسال فرکانس لیاقت و قرار گرفتن تحت حفاظت الهی برای تثبیت رشد، آرامش و برکت.'
+            },
+            {
+                num: '۰۲',
+                step: 1,
+                stepLabel: 'گام ۱: روح، ذهن و شخصیت',
+                title: 'بازطراحی سیستم مغزی شما',
+                subtitle: 'بر پایه علوم شناختی و نوروساینس',
+                desc: 'خداحافظی با خرافات جابه‌جایی لوازم خانه برای پولدار شدن! ریست کامل مغز بر اساس علوم نوین شناختی و کالبدشکافی ذهنیت غول‌های واقعی دنیا همچون وارن بافت و بزرگان اقتصاد ایران برای قرار گرفتن ناخودآگاه روی مدار ثروت و نفوذ.'
+            },
+            {
+                num: '۰۳',
+                step: 1,
+                stepLabel: 'گام ۱: روح، ذهن و شخصیت',
+                title: 'شخصیت‌سازی قدرتمند',
+                subtitle: 'چهار وجه رشد شخصیت',
+                desc: 'ساخت شأن و ابهت خیره‌کننده در چهار بخش تخصصی: کنترل احساسات و هوش هیجانی، کاریزما و جذابیت و اغواگری، سخنوری جادویی و قدرت کلام اثرگذار در هر جمعی، و اعتمادبه‌نفس و عزت‌نفس در بالاترین سطوح.'
+            },
+            {
+                num: '۰۴',
+                step: 1,
+                stepLabel: 'گام ۱: روح، ذهن و شخصیت',
+                title: 'اصول بی‌رحمانه موفقیت',
+                subtitle: 'موفقیت با شما تعارف ندارد',
+                desc: 'بدون تعارف و دروغ؛ ارائه حقایق تلخ، خشن و ناگفته‌ای که مانند سیلی بیدارکننده تنها بزرگان آن‌ها را پذیرفتند تا از سقوط در چاه‌های مسیر دشوار ثروت و قدرت نجات پیدا کنید.'
+            },
+            // گام ۲
+            {
+                num: '۰۵',
+                step: 2,
+                stepLabel: 'گام ۲: ارتباطات و کسب‌وکار',
+                title: 'ارتباطات و شبکه‌سازی',
+                subtitle: 'تبدیل شدن به یک مافیای ارتباطی',
+                desc: 'یکی از طولانی‌ترین و حیاتی‌ترین فصول دوره در ۷ تا ۸ بخش گسترده؛ تبدیل ارتباطات پراکنده روزمره به یک دایره منسجم و تحت رهبری خودتان به‌طوری‌که دیگران برای ارتباط با شما سرودست بشکنند و شبکه‌ای از متخصصان شما را به اهداف، درآمد و قدرت برسانند.'
+            },
+            {
+                num: '۰۶',
+                step: 2,
+                stepLabel: 'گام ۲: ارتباطات و کسب‌وکار',
+                title: 'جهان عظیم کسب‌وکار',
+                subtitle: 'ساخت امپراتوری کسب‌وکار (۲۱ محور)',
+                desc: 'مهم‌ترین و عظیم‌ترین بخش کتاب مقدس گروه باور؛ کامل‌ترین دوره بیزینس تاریخ ایران با ۲۱ محور عظیم بومی‌سازی‌شده برای بازار پربحران ایران (با همکاری صدها استاد دانشگاه) برای تبدیل شما به یک اَبَرکوچ فوق‌حرفه‌ای چه از صفر شروع کنید چه کسب‌وکاری متوقف‌شده داشته باشید.',
+                featured: true,
+                actionHref: '#business-world',
+                actionText: 'مشاهده کالبدشکافی ۲۱ محور فصل ۶'
+            },
+            // گام ۳
+            {
+                num: '۰۷',
+                step: 3,
+                stepLabel: 'گام ۳: سرمایه‌گذاری',
+                title: 'جهان عظیم سرمایه‌گذاری',
+                subtitle: 'ثروت‌سازی و خلق دارایی',
+                desc: 'هیچ‌کس صرفاً با پول درآوردن ثروتمند نشده؛ آموزش گام‌به‌گام و اصولی سرمایه‌گذاری در انواع بازارها (ملک، فلزات گران‌بها، پوشاک، دارایی‌های دیجیتال) برای حفظ ارزش پول و چندبرابر کردن آن بدون نیاز به کار مستقیم.'
+            },
+            {
+                num: '۰۸',
+                step: 3,
+                stepLabel: 'گام ۳: سرمایه‌گذاری',
+                title: 'بازارهای اصلی سرمایه‌گذاری',
+                subtitle: 'سه غول ثروت‌ساز',
+                desc: 'تسلط کامل بر سه بازار کلیدی: ۱) ملک؛ شاهِ شاهان بازارهای سرمایه‌گذاری، ۲) فلزات گران‌بها؛ اعلی‌حضرت‌ها، طلا و نقره، ۳) بازارهای مالی و ارزهای دیجیتال؛ پرریسک اما به‌شدت اغواگر و سودآور.',
+                actionHref: '#wealth-giants',
+                actionText: 'مشاهده ویترین سه غول ثروت‌ساز'
+            },
+            // گام ۴
+            {
+                num: '۰۹',
+                step: 4,
+                stepLabel: 'گام ۴: قدرت، نبرد و نخبگان',
+                title: 'جهان پررمزوراز قدرت',
+                subtitle: 'ورود از سطح عوام به حلقه خواص',
+                desc: 'دستاورد کم‌نظیر دوره در حدود ۱۰ بخش عمیق؛ تمام ناگفته‌ها، سیاست‌ها، روندها و ساختارهای اقتدار، نفوذ و سلطه فردی و اجتماعی که صاحبان قدرت نمی‌خواهند بدانید تا ثروت، شهرت و گروه‌های قدرتمند خودخواسته در برابر اقتدار شما تسلیم شوند.'
+            },
+            {
+                num: '۱۰',
+                step: 4,
+                stepLabel: 'گام ۴: قدرت، نبرد و نخبگان',
+                title: 'جنگ و استراتژی‌های نبرد',
+                subtitle: 'همه زندگی جنگ است',
+                desc: 'از نبرد میان دو سلول تا کشورها و تاکید کتب آسمانی بر آمادگی برای نبرد؛ آموزش مهارت‌های جنگی، رقابتی و دفاع روانی در میدان رقابت‌های سنگین تجاری و دشمنی‌های مسیر موفقیت تا هیچ رقیبی توان مقابله با شما را نداشته باشد.'
+            },
+            {
+                num: '۱۱',
+                step: 4,
+                stepLabel: 'گام ۴: قدرت، نبرد و نخبگان',
+                title: 'بازطراحی زندگی',
+                subtitle: 'به سبک ثروتمندان و قدرتمندان',
+                desc: 'کوبیدن و از نو ساختن سبک زندگی عادی؛ پیاده‌سازی روتین‌ها، عادت‌ها، اخلاقیات و چارچوب زندگی نخبگان پنهان و قدرتمندان واقعی برای هم‌تراز و برتر شدن از آن‌ها.'
+            },
+            {
+                num: '۱۲',
+                step: 4,
+                stepLabel: 'گام ۴: قدرت، نبرد و نخبگان',
+                title: 'ارتباطات و شبکه‌سازی سطح بالا',
+                subtitle: 'نفوذ در حلقه بزرگان',
+                desc: 'کلید گمشده در ۵ تا ۷ بخش کاملاً اختصاصی؛ آموزش ارتباط‌گیری، نفوذ و رهبری شبکه در میان صاحبان بانک‌های بزرگ، انبوه‌سازان، کارخانه‌داران مطرح (همچون صاحبان صنایع ماموت و کاله)، چهره‌های بزرگ اقتصادی (مانند علی انصاری و بابک زنجانی) و سیاستمداران.'
+            },
+            // گام ۵
+            {
+                num: '۱۳',
+                step: 5,
+                stepLabel: 'گام ۵: تجارت و اَبَررهبری',
+                title: 'آموزش جهان تجارت',
+                subtitle: '۹ در از ۱۰ در ثروت در تجارت است',
+                desc: 'موفقیت مالی ۱۰ در دارد که ۹ در آن تجارت است؛ حاصل دو سال پژوهش از بزرگان تجارت شامل تمام اصول عملی تجارت داخلی (از سطح دو مغازه تا سطح کلان شهری و سازمانی)، تجارت آنلاین و تجارت بین‌الملل (صادرات و واردات) از صفر تا سطح جهانی.'
+            },
+            {
+                num: '۱۴',
+                step: 5,
+                stepLabel: 'گام ۵: تجارت و اَبَررهبری',
+                title: 'مدیریت زمان و انرژی',
+                subtitle: 'زمان، مهم‌ترین دارایی شماست',
+                desc: 'کسانی که بر زمان مسلط نیستند بازندگان قطعی جهان‌اند؛ بدون حاشیه‌گویی، صرفاً استراتژی‌های ناب و شنیده‌نشده برگرفته از دانش ۲۷ استاد برجسته دانشگاهی برای مدیریت هوشمندانه زمان خود، شرکت و اطرافیان و حفظ انرژی.'
+            },
+            {
+                num: '۱۵',
+                step: 5,
+                stepLabel: 'گام ۵: تجارت و اَبَررهبری',
+                title: 'رهبری و مدیریت',
+                subtitle: 'تبدیل شدن به یک اَبَررهبر',
+                desc: 'دور ریختن کلیشه‌های مدیریتی و یادگیری استراتژی‌های محرمانه بزرگ‌ترین رهبران کسب‌وکار، سیاست و فرماندهان نظامی تاریخ برای هدایت خود، سازمان، مردم و مدیریت دشمنان؛ دانشی در سطح رهبری یک کشور!'
+            },
+            {
+                num: '۱۶',
+                step: 5,
+                stepLabel: 'گام ۵: تجارت و اَبَررهبری',
+                title: 'تجربیات خاص بزرگان',
+                subtitle: 'پاسخ به سوال «چگونه مثل شما شوم؟»',
+                desc: 'عصاره صدها زندگی و سال‌ها رفاقت و همکاری مستقیم گروه باور با ثروتمندترین چهره‌های ایران (از جمله عظیم‌زاده و انصاری) در ۴ عنصر حیاتی: تجربیات کلیدی، دلایل رشد انفجاری، استراتژی‌های طلایی و علل واقعی شکست و سقوط.'
+            },
+            {
+                num: '۱۷',
+                step: 5,
+                stepLabel: 'گام ۵: تجارت و اَبَررهبری',
+                title: 'مدیریت شکست',
+                subtitle: 'ساختن دوباره و شروعی قوی‌تر',
+                desc: 'شک نکنید همه ما شکست می‌خوریم؛ اما تفاوت بزرگان با دیگران در نحوه مواجهه با آن است. آموزش تبدیل هر شکست در زندگی و کسب‌وکار به بالی قدرتمند برای پرش و رشد انفجاری بعدی.'
+            }
+        ];
+
+        /**
+         * داده‌های کامل ۲۱ محور فصل ششم: جهان عظیم کسب‌وکار
+         */
+        const businessPillars = [
+            { num: '۰۱', cat: 'foundation', title: 'ایده‌پردازی و تحلیل بازار', desc: 'تبدیل ایده به بیزینس بزرگ با شناخت عمیق مشتری، رقبا، بازار و اقتصاد.' },
+            { num: '۰۲', cat: 'foundation', title: 'مدل کسب‌وکار حرفه‌ای', desc: 'طراحی دقیق سازوکار درآمدزایی، جریان پول‌سازی و سودآوری مستمر.' },
+            { num: '۰۳', cat: 'foundation', title: 'خلق ارزش پیشنهادی برای مشتری', desc: 'ارائه دقیق محصول و خدمات متمایز به مشتریان هدف در زمان مناسب.' },
+            { num: '۰۴', cat: 'foundation', title: 'قیمت‌گذاری با استراتژی', desc: 'هنر تعیین قیمت و زمان‌بندی دقیق آن برای جلوگیری از شکست حتمی.' },
+            { num: '۰۵', cat: 'foundation', title: 'برندسازی سازمانی', desc: 'رهایی از دوندگی بی‌ثمر و ساخت برندی ماندگار با زبانی شفاف و اجرایی.' },
+            { num: '۰۶', cat: 'foundation', title: 'برندسازی شخصی و اعتبار', desc: 'ساخت جایگاه و اعتبار مستحکم در سطح بازاری‌های بزرگ و نامدار.' },
+            { num: '۰۷', cat: 'sales', title: 'جذب مشتری هدفمند', desc: 'اصول حرفه‌ای شکار و جذب مشتریان ایده‌آل و آماده خرید.' },
+            { num: '۰۸', cat: 'sales', title: 'حفظ مشتری و وفادارسازی به برند', desc: 'تبدیل هر مشتری به خریدار صدباره و مبلغ رایگان برند شما.' },
+            { num: '۰۹', cat: 'sales', title: 'فروش اثرگذار، انفجاری و تکرارشونده', desc: 'تسلط بر اکسیژن حیات هر کسب‌وکار برای خلق فروش‌های پیوسته.' },
+            { num: '۱۰', cat: 'sales', title: 'مذاکره برنده', desc: 'رمز پیروزی بیزینس‌من‌های حرفه‌ای بر سر هر میز معامله و قرارداد.' },
+            { num: '۱۱', cat: 'systems', title: 'سیستم‌سازی و خودکارسازی کسب‌وکار', desc: 'طراحی سیستمی که بدون حضور دائمی شما، خودکار درآمد بسازد و رشد کند.' },
+            { num: '۱۲', cat: 'systems', title: 'تیم‌سازی و مدیریت منابع انسانی', desc: 'اصول جذب، آموزش، رهبری، مدیریت و حتی اخراج حرفه‌ای اعضای تیم.' },
+            { num: '۱۳', cat: 'systems', title: 'مدیریت مالی حرفه‌ای سازمان', desc: 'پی‌ریزی شالوده مالی دقیق برای جلوگیری از سقوط ناگهانی سازمان.' },
+            { num: '۱۴', cat: 'systems', title: 'توسعه و رشد پایدار کسب‌وکار', desc: 'نقشه تبدیل کسب‌وکار معمولی به یک امپراتوری پایدار و غیرقابل توقف.' },
+            { num: '۱۵', cat: 'strategy', title: 'تفکر استراتژیک و تصمیم‌گیری در بحران', desc: 'قدرت تصمیم‌گیری منظم، هوشمندانه و لحظه‌ای در شرایط بحرانی اقتصاد کشور.' },
+            { num: '۱۶', cat: 'sales', title: 'خلق تجربه بی‌نظیر برای مشتری', desc: 'ساخت حال خوب مداوم به‌عنوان کلید اصلی خریدهای مکرر و وفاداری.' },
+            { num: '۱۷', cat: 'systems', title: 'رشد و توسعه شخصی رهبر سازمان', desc: 'زیرا هیچ سازمانی هرگز فراتر از رشد شخصیتی و فکری رهبرش بزرگ نمی‌شود.' },
+            { num: '۱۸', cat: 'strategy', title: 'سیاست‌گذاری، رقابت و بازی قدرت در بازارها', desc: 'تسلط بر استراتژی‌های رقابتی و جنگی برای پیروزی قطعی در میدان بازار.' },
+            { num: '۱۹', cat: 'strategy', title: 'صادرات و جهانی‌سازی', desc: 'نقشه راه عبور از مرزهای داخلی و جهانی کردن کسب‌وکار شما.' },
+            { num: '۲۰', cat: 'strategy', title: 'روان‌شناسی کسب‌وکار', desc: 'دانش حیاتی و گسترده‌ای که بدون آن هیچ کسب‌وکاری شانسی برای بقا ندارد.' },
+            {
+                num: '۲۱',
+                cat: 'strategy',
+                title: 'استراتژی‌های بومی‌سازی‌شده برای ایران',
+                desc: 'استراتژی‌های جنگی و ویژه طراحی‌شده اختصاصی برای اقتصاد سخت، خاص و پربحران ایران؛ کلید بقا و پیروزی مطلق در بازار داخلی.',
+                mostImportant: true
+            }
+        ];
+
+        /**
+         * رندر کردن کارت‌های ۱۷ فصل بر اساس فیلتر گام
+         */
+        function renderChapters(stepFilter = 'all') {
+            const grid = document.getElementById('chapters-grid');
+            const banner = document.getElementById('active-step-banner');
+            const bannerTitle = document.getElementById('active-step-title');
+            const bannerDesc = document.getElementById('active-step-desc');
+
+            if (stepFilter === 'all') {
+                banner.classList.add('hidden');
+            } else {
+                const info = stepMeta[stepFilter];
+                bannerTitle.textContent = info.title;
+                bannerDesc.textContent = info.desc;
+                banner.classList.remove('hidden');
+            }
+
+            const filtered = stepFilter === 'all'
+                ? chaptersData
+                : chaptersData.filter(ch => String(ch.step) === String(stepFilter));
+
+            grid.innerHTML = filtered.map(ch => `
+                <article class="luxury-card group relative flex flex-col justify-between rounded-2xl p-6 sm:p-7 ${ch.featured ? 'border-gold-400/55 shadow-gold-soft ring-1 ring-gold-400/20' : ''}">
+                    <div>
+                        <div class="flex items-center justify-between gap-3">
+                            <span class="inline-flex items-center justify-center rounded-xl border border-gold-300/35 bg-gradient-to-br from-gold-300/20 to-obsidian-950 px-3.5 py-1.5 text-sm font-black text-gold-200">
+                                فصل ${ch.num}
+                            </span>
+                            <span class="rounded-lg border border-gold-300/15 bg-obsidian-950/80 px-2.5 py-1 text-[11px] font-semibold text-warmgray">
+                                ${ch.stepLabel}
+                            </span>
+                        </div>
+
+                        <h3 class="mt-5 text-xl font-black text-ivory group-hover:text-gold-200 transition-colors">
+                            ${ch.title}
+                        </h3>
+                        <p class="mt-1 text-xs sm:text-sm font-bold text-gold-300/90">
+                            ${ch.subtitle}
+                        </p>
+                        <p class="mt-4 text-sm leading-7 text-warmgray">
+                            ${ch.desc}
+                        </p>
+                    </div>
+
+                    ${ch.actionHref ? `
+                        <div class="mt-6 pt-4 border-t border-gold-300/15">
+                            <a href="${ch.actionHref}" class="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold text-gold-300 hover:text-gold-200 transition-colors">
+                                <span>${ch.actionText}</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </a>
+                        </div>
+                    ` : ''}
+                </article>
+            `).join('');
+        }
+
+        /**
+         * رندر کردن ۲۱ محور فصل ششم با جستجو و فیلتر دسته‌بندی
+         */
+        let currentPillarCat = 'all';
+
+        function renderPillars() {
+            const grid = document.getElementById('pillars-grid');
+            const emptyState = document.getElementById('pillars-empty');
+            const searchQuery = (document.getElementById('pillar-search').value || '').trim().toLowerCase();
+
+            const filtered = businessPillars.filter(item => {
+                const matchesCat = currentPillarCat === 'all' || item.cat === currentPillarCat;
+                const matchesSearch = !searchQuery
+                    || item.title.toLowerCase().includes(searchQuery)
+                    || item.desc.toLowerCase().includes(searchQuery)
+                    || item.num.includes(searchQuery);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(item => `
+                <div class="relative rounded-2xl p-5 sm:p-6 transition-all duration-300 ${
+                    item.mostImportant
+                        ? 'sm:col-span-2 lg:col-span-3 border-2 border-gold-400/75 bg-gradient-to-l from-obsidian-800 via-obsidian-900 to-obsidian-950 shadow-gold-glow'
+                        : 'luxury-card'
+                }">
+                    <div class="flex items-start gap-4">
+                        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl font-black text-sm ${
+                            item.mostImportant
+                                ? 'bg-gradient-to-br from-gold-200 via-gold-400 to-gold-500 text-obsidian-950 shadow-gold-soft'
+                                : 'border border-gold-300/30 bg-obsidian-950 text-gold-300'
+                        }">
+                            ${item.num}
+                        </span>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <h3 class="text-base sm:text-lg font-extrabold ${item.mostImportant ? 'text-gold-gradient' : 'text-ivory'}">
+                                    ${item.title}
+                                </h3>
+                                ${item.mostImportant ? `
+                                    <span class="inline-flex items-center gap-1 rounded-full bg-gradient-to-l from-gold-300 to-gold-500 px-3 py-0.5 text-[11px] font-black text-obsidian-950">
+                                        ★ مهم‌ترین بخش
+                                    </span>
+                                ` : ''}
+                            </div>
+                            <p class="mt-2 text-sm leading-7 ${item.mostImportant ? 'text-ivory/90' : 'text-warmgray'}">
+                                ${item.desc}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        /**
+         * نمایش اعلان شیک (Toast) به‌جای alert
+         */
+        let toastTimer = null;
+        function showToast(message) {
+            const toastBox = document.getElementById('toast-box');
+            const toastText = document.getElementById('toast-text');
+            toastText.textContent = message;
+            toastBox.classList.remove('opacity-0', 'translate-y-4');
+            toastBox.classList.add('opacity-100', 'translate-y-0');
+
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toastBox.classList.add('opacity-0', 'translate-y-4');
+                toastBox.classList.remove('opacity-100', 'translate-y-0');
+            }, 4200);
+        }
+
+        /**
+         * مدیریت کلیک روی لینک‌های سایت و تلگرام رسمی
+         */
+        function handleOfficialLink(event, targetName) {
+            event.preventDefault();
+            showToast(`لینک ${targetName} آماده اتصال به نشانی اختصاصی شماست. همچنین می‌توانید از فرم کنار همین بخش، پیش‌ثبت‌نام فوری انجام دهید.`);
+        }
+
+        /**
+         * راه‌اندازی رویدادها پس از بارگذاری کامل صفحه
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            // ۱. رندر اولیه ۱۷ فصل و ۲۱ محور
+            renderChapters('all');
+            renderPillars();
+
+            // ۲. فیلترهای تب ۵ گام
+            const stepButtons = document.querySelectorAll('.step-filter-btn');
+            stepButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    stepButtons.forEach(b => {
+                        b.classList.remove('active', 'border-gold-400', 'bg-gradient-to-l', 'from-gold-300', 'to-gold-500', 'text-obsidian-950', 'shadow-gold-soft', 'font-extrabold');
+                        b.classList.add('border-gold-300/25', 'bg-obsidian-800', 'text-warmgray', 'font-bold');
+                    });
+                    btn.classList.remove('border-gold-300/25', 'bg-obsidian-800', 'text-warmgray', 'font-bold');
+                    btn.classList.add('active', 'border-gold-400', 'bg-gradient-to-l', 'from-gold-300', 'to-gold-500', 'text-obsidian-950', 'shadow-gold-soft', 'font-extrabold');
+                    renderChapters(btn.dataset.step);
+                });
+            });
+
+            // ۳. جستجو و فیلتر دسته‌بندی ۲۱ محور فصل ششم
+            document.getElementById('pillar-search').addEventListener('input', renderPillars);
+            const catButtons = document.querySelectorAll('.pillar-cat-btn');
+            catButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    catButtons.forEach(b => {
+                        b.classList.remove('active', 'border-gold-400', 'bg-gold-400/20', 'text-gold-200', 'font-bold');
+                        b.classList.add('border-gold-300/20', 'bg-obsidian-900', 'text-warmgray', 'font-semibold');
+                    });
+                    btn.classList.remove('border-gold-300/20', 'bg-obsidian-900', 'text-warmgray', 'font-semibold');
+                    btn.classList.add('active', 'border-gold-400', 'bg-gold-400/20', 'text-gold-200', 'font-bold');
+                    currentPillarCat = btn.dataset.cat;
+                    renderPillars();
+                });
+            });
+
+            // ۴. منوی موبایل
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+
+            function toggleMobileMenu(forceClose = false) {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                if (forceClose || isOpen) {
+                    mobileMenu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                } else {
+                    mobileMenu.classList.remove('hidden');
+                    iconOpen.classList.add('hidden');
+                    iconClose.classList.remove('hidden');
+                }
+            }
+
+            mobileBtn.addEventListener('click', () => toggleMobileMenu());
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => toggleMobileMenu(true));
+            });
+
+            // ۵. آکاردئون سوالات متداول (FAQ)
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const trigger = item.querySelector('.accordion-trigger');
+                trigger.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    accordionItems.forEach(other => other.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
+                });
+            });
+
+            // ۶. اعتبارسنجی و ثبت فرم پیش‌ثبت‌نام
+            const regForm = document.getElementById('registration-form');
+            const formError = document.getElementById('form-error');
+            const formContainer = document.getElementById('form-container');
+            const formSuccess = document.getElementById('form-success');
+
+            regForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                formError.classList.add('hidden');
+
+                const nameVal = document.getElementById('fullName').value.trim();
+                const phoneRaw = document.getElementById('phone').value.trim();
+                // تبدیل اعداد فارسی و عربی به انگلیسی و حذف فاصله‌ها
+                const normalizedPhone = phoneRaw
+                    .replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d))
+                    .replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d))
+                    .replace(/[\s\-()]/g, '');
+
+                const statusInput = document.querySelector('input[name="userStatus"]:checked');
+                const userStatus = statusInput ? statusInput.value : 'شروع از صفر';
+
+                if (nameVal.length < 3) {
+                    formError.textContent = 'لطفاً نام و نام خانوادگی خود را به‌صورت کامل وارد کنید.';
+                    formError.classList.remove('hidden');
+                    return;
+                }
+
+                if (!/^(\+98|0)?9\d{9}$/.test(normalizedPhone)) {
+                    formError.textContent = 'لطفاً یک شماره موبایل معتبر ایرانی (مثلاً 09123456789) وارد نمایید.';
+                    formError.classList.remove('hidden');
+                    return;
+                }
+
+                // تولید کد پیگیری
+                const tracking = 'BVR-' + Math.floor(100000 + Math.random() * 900000);
+                document.getElementById('success-message-text').textContent =
+                    `${nameVal} عزیز، درخواست دریافت شرایط «کتاب مقدس گروه باور» با شماره ${normalizedPhone} ثبت شد. کارشناسان گروه باور در سریع‌ترین زمان برای راهنمایی و ارسال لینک دسترسی با شما تماس می‌گیرند.`;
+                document.getElementById('tracking-code').textContent = tracking;
+                document.getElementById('confirmed-status').textContent = userStatus;
+
+                formContainer.classList.add('hidden');
+                formSuccess.classList.remove('hidden');
+                formSuccess.classList.add('flex');
+                showToast('پیش‌ثبت‌نام شما با موفقیت ثبت شد!');
+            });
+
+            document.getElementById('reset-form-btn').addEventListener('click', () => {
+                regForm.reset();
+                formSuccess.classList.add('hidden');
+                formSuccess.classList.remove('flex');
+                formContainer.classList.remove('hidden');
+            });
+
+            // ۷. نوار پیشرفت اسکرول طلایی
+            const progressBar = document.getElementById('scroll-progress');
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+            }, { passive: true });
+
+            // ۸. انیمیشن اسکرول نرم (IntersectionObserver)
+            const revealElements = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+                revealElements.forEach(el => observer.observe(el));
+            } else {
+                revealElements.forEach(el => el.classList.add('is-visible'));
+            }
+        });
+    </script>
+</body>
+</html>
